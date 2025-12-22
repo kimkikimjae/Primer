@@ -26,3 +26,4 @@ int main() {
 
 // 10.10
 // unique in <algorithms> does not erase itself elements in container and they are removed by container's own erase.
+
