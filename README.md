@@ -1,0 +1,11 @@
+hi. i'm just studying c++ primer 5th.
+
+i could have done just reading this once, 
+  but i found that those examples are much good to practice code with concecpts in it.
+  
+so i'm writing my solutions of mine, so of course there would be errors.
+
+IFF u r so boring these days, found this shit, and eager to direct my stupid errors,
+  hope you send a correcting mail to ~ kkw2920@naver.com / kijae29207177@gmail.com
+
+:)
