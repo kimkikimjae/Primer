@@ -45,6 +45,11 @@ int main()
 {
 	ex_10_20();
 	ex_10_21();
+	list<int> list1{ 1, 3, 5, 7 };
+	list<int> list2{ 2, 4, 6, 8 };
+	list1.merge(list2);
+	for (const int& i : list1) cout << i << ' ';
+
 	return 0;
 }
 
