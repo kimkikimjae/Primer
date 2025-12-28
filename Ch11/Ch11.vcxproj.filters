@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="!1.24_11.26.cpp">
+    <ClCompile Include="11.24_11.26.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
