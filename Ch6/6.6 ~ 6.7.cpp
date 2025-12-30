@@ -57,5 +57,6 @@ int main() {
 	}
 	cout << '\n';
 	for (const int& i : vec) cout << i << " ";
+	
 	return 0;
 }
