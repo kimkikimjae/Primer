@@ -5,7 +5,6 @@ using namespace std;
 
 // 6.54.
 int func(int, int);
-int (*pf)(int, int);
 vector<int(*)(int, int)> vec;
 
 // 6.55.
