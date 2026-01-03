@@ -1,4 +1,5 @@
 #include <iostream>
+
 using namespace std;
 
 void ex_6_10(int* pa, int* pb) {
