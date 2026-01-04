@@ -3,3 +3,6 @@ but quite good qualities. I cannot just pass over these. i have to solve themm
 
 This repo is just my practice space, so anyone stay here are free to view my codes or cut and join in.
 Thanks for your interest and you can edit or make some comments here.
+
+This repo is stil be updating. Maybe much of time would be required, cause so much lazy these days. 
+Anyway I'll try hard to complete.
