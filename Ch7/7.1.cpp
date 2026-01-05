@@ -2,13 +2,8 @@
 #include <string>
 #include <istream>
 #include <ostream>
+#include "Sales_data.h"
 using namespace std;
-
-struct Sales_data {
-	string bookNo;
-	unsigned int units_sold = 0;
-	double revenue = .0;
-};
 
 int main() {
 	Sales_data total;
