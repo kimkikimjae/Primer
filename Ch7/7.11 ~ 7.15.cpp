@@ -2,34 +2,34 @@
 #include <string>
 #include <istream>
 #include <ostream>
-using namespace std;
+
 
 // 7.11.
-ostream& print(ostream& os, const Sales_data& item);
+std::ostream& print(std::ostream& os, const Sales_data& item);
 class Sales_data {
 public:
 	Sales_data() = default;
-	Sales_data(const string& s, unsigned int n, double p) : bookNo(s), units_sold(n), revenue(p* n) {};
-	Sales_data(const string& s) : bookNo(s) {};
+	Sales_data(const std::string& s, unsigned int n, double p) : bookNo(s), units_sold(n), revenue(p* n) {};
+	Sales_data(const std::string& s) : bookNo(s) {};
 	// for 7.14.
 	// Sales_data(const string& s) : bookNo(s), units_sold(0), revenue(.0) {};
-	Sales_data(istream&);
-	string isbn() const { return bookNo; }
+	Sales_data(std::istream&);
+	std::string isbn() const { return bookNo; }
 	Sales_data& combine(const Sales_data&);
 	double avg_price() const { return units_sold ? revenue / units_sold : 0; }
-	string bookNo;
+	std::string bookNo;
 	unsigned int units_sold = 0;
 	double revenue = .0;
 };
 
-istream& read(istream& is, Sales_data& item) {
+std:: istream& read(std:: istream& is, Sales_data& item) {
 	double price = .0;
 	is >> item.bookNo >> item.units_sold >> price;
 	item.revenue = price * item.units_sold;
 	return is;
 }
 
-Sales_data::Sales_data(istream& is) { read(is, *this); }
+Sales_data::Sales_data(std::istream& is) { read(is, *this); }
 
 int main() {
 	Sales_data s1(); // s3.bookNo = "" && s3.units_sold = 0 && s3.revenue = .0;
@@ -51,18 +51,18 @@ int main() {
 // I dont understand what the question is istructing to do.
 // I think my code is not correct for this, so i hope you read others' codes.
 void ex_7_13() {
-	Sales_data total(cin);
-	if (total.bookNo == "") cerr << "No data?!" << endl;
+	Sales_data total(std::cin);
+	if (total.bookNo == "") std::cerr << "No data?!" << std::endl;
 	Sales_data trans;
-	while (read(cin, trans)) {
+	while (read(std::cin, trans)) {
 		if (total.isbn() == trans.isbn())
 			total.combine(trans);
 		else {
-			print(cout, total) << endl;
+			print(std::cout, total) << std::endl;
 			total = trans;
 		}
 	}
-	print(cout, total) << endl;
+	print(std::cout, total) << std::endl;
 }
 
 
@@ -71,9 +71,9 @@ void ex_7_13() {
 // I can't find class Person :( but it could be easy to make some constructors.
 // below code is just an imaginary code for not founded class: Person.
 struct Person {
-	string name;
+	std::string name;
 	int num;
 	Person() = default;
-	Person(const string& s) : name(s), num(0) {};
-	Person(const string& s, const int& n) : name(s), num(n) {};
+	Person(const std::string& s) : name(s), num(0) {};
+	Person(const std::string& s, const int& n) : name(s), num(n) {};
 };
