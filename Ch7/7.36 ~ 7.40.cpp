@@ -49,3 +49,5 @@ inline void show_book_info(const Book& B) {std::cout << B.page_num << " " << B.b
 inline void Book::set_page_num(const int& i) { page_num = i; }
 inline void Book::set_mark_num(const int& i) { book_mark_num = i; }
 inline void Book::set_setence(const std::string& s) { chose_sentence = s; }
+
+
