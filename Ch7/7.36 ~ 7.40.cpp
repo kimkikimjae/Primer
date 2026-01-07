@@ -20,10 +20,18 @@
 
 // 7.39.
 // ... is there any answer for this? It depends on what purpose the user uses this program.
-// Even they can be evaluated by their type like, std::string has its own initialized constructor, so even if I do not set basic argument, it would be already initialized as empty string.
-// In this view, it is not dangerous in the view of non-initialzing basic value. Unlike built-in type like int or double, std::string is template library type and is well-structured.
-// std::string is ok, but istream& type is not sure, cause istream& paramter could be standard input or other things like external file existing in other directory in computer.
-// If we set basic paramter as std::cin, then the program would be working in somehow different purpose. In this case, placing basic argument can be dangerous.
+
+// Even they can be evaluated by their type like, std::string has its own initialized constructor, 
+//			so even if I do not set basic argument, it would be already initialized as empty string.
+
+// In this view, it is not dangerous in the view of non-initialzing basic value. 
+//			Unlike built-in type like int or double, std::string is template library type and is well-structured.
+
+// std::string is ok, but istream& type is not sure, 
+//			cause istream& paramter could be standard input or other things like external file existing in other directory in computer.
+
+// If we set basic paramter as std::cin, then the program would be working in somehow different purpose. 
+//			In this case, placing basic argument can be dangerous.
 
 
 // 7.40.
@@ -49,5 +57,11 @@ inline void show_book_info(const Book& B) {std::cout << B.page_num << " " << B.b
 inline void Book::set_page_num(const int& i) { page_num = i; }
 inline void Book::set_mark_num(const int& i) { book_mark_num = i; }
 inline void Book::set_setence(const std::string& s) { chose_sentence = s; }
-
+/*
+* 
+* 
+* 
+* 
+* 
+*/
 
