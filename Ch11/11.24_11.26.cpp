@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <algorithm>
 #include <map>
 #include <set>
@@ -30,4 +30,3 @@ int main()
 	return 0;
 }
 
-// test syntax for using jetriders...
