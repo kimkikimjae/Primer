@@ -2,7 +2,8 @@
 #include "Quote.h"
 
 // 15.4
-// (c) is wrong. It does not have its class body.
+// (a) is wrong. Class itself cannot declared as direct base.
+// (c) is wrong. Declaration of class does not need direct base. It only needs its name.
 
 
 // 15.5
@@ -17,7 +18,7 @@ void ex_15_6() {
 	Bulk_quote bq("bq", 100, 10, 0.6);
 
 	// each third argument is just arbitrarily tossed to parameter, just for testing example.
-	// you can type it in with problem context.
+	// you can type it in following example context.
 	print_total(std::cout, q, 1);
 	print_total(std::cout, bq, 2);
 }
