@@ -9,7 +9,9 @@ public:
 
 	std::string isbn() const { return bookNo; }
 	virtual double net_price(std::size_t n) const { return n * price; }
-	virtual void debug() const {
+
+	// For example 15.11.
+	virtual void debug() const {						
 		std::cout << bookNo << " " << price << std::endl;
 	}
 	virtual ~Quote() = default;
@@ -23,9 +25,15 @@ protected:
 class Disc_quote : public Quote {
 public:
 	Disc_quote() = default;
-	Disc_quote(const std::string& book, double price, std::size_t qty, double disc) : Quote(book, price), quantity(qty), discount(disc) {
+	Disc_quote(const std::string& book, double price, std::size_t qty, double disc) : 
+		Quote(book, price), quantity(qty), discount(disc) {}
+	double net_price(std::size_t) const = 0; // pure virtual function
+
+	// For example 15.11.
+	void debug() const override {
+		std::cout << quantity << " " << discount << std::endl;
 	}
-	double net_price(std::size_t) const = 0;
+
 protected:
 	std::size_t quantity = 0;
 	double discount = .0;
@@ -34,8 +42,12 @@ protected:
 class Bulk_quote : public Disc_quote {
 public:
 	Bulk_quote() = default;
-	Bulk_quote(const std::string& book, double price, std::size_t qty, double disc) : Disc_quote(book, price, qty, disc) { }
+	Bulk_quote(const std::string& book, double price, std::size_t qty, double disc) : 
+		Disc_quote(book, price, qty, disc) {}
 	double net_price(std::size_t) const override;
+
+	// For example 15.11.
+	void debug() const override {}
 };
 
 inline double Bulk_quote::net_price(std::size_t cnt) const {
