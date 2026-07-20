@@ -24,7 +24,10 @@
     <ClCompile Include="9.3_9.6.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="9.7_9.8.cpp">
+    <ClCompile Include="9.41_9.42.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
