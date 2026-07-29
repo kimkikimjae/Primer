@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <functional>
 #include <vector>
 #include <list>
@@ -8,7 +8,7 @@ using namespace std;
 
 void ex_16_1() {
 	// what is instantitaion? 
-	// ¼³¸í ´õ Ãß°¡ÇÒ °Í(¿¹Á¤)
+	// ì„¤ëª… ë” ì¶”ê°€í•  ê²ƒ(ì˜ˆì •)
 }
 
 // for ex.16.2
@@ -26,7 +26,7 @@ void ex_16_2() {
 
 
 void ex_16_3() {
-	// Sales_data.h °¡Á®¿À½Ã°í
+	// Sales_data.h ê°€ì ¸ì˜¤ì‹œê³ 
 }
 
 
@@ -53,5 +53,3 @@ void ex_16_4() {
 	find(li.begin(), li);
 }
 
-
-template int compare(const int&, const int&);
