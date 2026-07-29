@@ -12,15 +12,14 @@ void ex_16_1() {
 }
 
 // for ex.16.2
-template <typename T>
-bool compare(const T& t1, const T& t2) {
+template <typename T> int compare(const T& t1, const T& t2) {
 	if (less<T>()(t1, t2)) return -1;
 	if (less<T>()(t2, t1)) return 1;
 	return 0;
 }
 void ex_16_2() {
 	int a = 10, b = 20;
-	bool res = compare(a, b);
+	int res = compare(a, b);
 	cout << res << '\n';
 }
 
@@ -54,3 +53,5 @@ void ex_16_4() {
 	find(li.begin(), li);
 }
 
+
+template int compare(const int&, const int&);
