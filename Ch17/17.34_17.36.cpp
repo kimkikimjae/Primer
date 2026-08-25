@@ -3,6 +3,7 @@
 #include <cmath>
 #include <chrono>
 #include <thread>
+#include <sstream>
 
 using namespace std;
 
@@ -37,13 +38,15 @@ void ex_17_34() {
 		<< hexfloat << sqrt(2.0) << '\n'
 		<< defaultfloat << sqrt(2.0) << "\n\n";
 
-
-
-
-
-
-	// unitbuf 쓰려면 fstream 객체를 써야 한다고 함. 
-	// nounitbuf 선언하더라도 MSVC의 강제 최적화 기능때문에 적용이 안됨.
+	// skipws & noskipws
+	string text = "a    b\n ccc d";
+	string result;
+	istringstream is(text);
+	is >> skipws;
+	while (is >> result)
+		cout << result;
+	cout << "\n\n";
+	is >> noskipws;
 }
 
 void ex_17_35() {
