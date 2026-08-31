@@ -17,6 +17,3 @@ Release/
 *.opensdf
 *.suo
 *.user
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
